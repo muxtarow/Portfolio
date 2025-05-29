@@ -216,82 +216,116 @@ const Contact = () => {
             </div>
           </div>
           {/* contact form */}
-         <div className="bg-gray-900 rounded-lg shadow-[0px_0px_10px_5px_rgba(0,0,0,0.3)] shadow-[#27ae60] p-8">
-  <h3 className="text-3xl font-semibold text-gray-300 mb-6">Get in Touch</h3>
+          <div className="bg-gray-900 rounded-lg shadow-[0px_0px_10px_5px_rgba(0,0,0,0.3)] shadow-[#27ae60] p-8">
+            <h3 className="text-3xl font-semibold text-gray-300 mb-6">Get in Touch</h3>
 
-  <form
-    className="space-y-6"
-    onSubmit={async (e) => {
-      e.preventDefault();
+            {/* Notification div */}
+            <div
+              id="successMessage"
+              className="relative text-white font-medium mb-4 bg-green-600 py-2 px-4 rounded-lg overflow-hidden transition-opacity duration-500 opacity-0 pointer-events-none"
+            >
+              ✅ Xabaringiz yuborildi!
+              <div
+                id="progressBar"
+                className="absolute bottom-0 left-0 h-1 bg-white"
+                style={{ width: "100%", transition: "width 2.5s linear" }}
+              ></div>
+            </div>
 
-      const name = e.target.name.value;
-      const email = e.target.email.value;
-      const message = e.target.message.value;
+            <form
+              className="space-y-6"
+              onSubmit={async (e) => {
+                e.preventDefault();
 
-      const telegramMessage = `📩 *Yangi xabar!*\n\n👤 *Ism:* ${name}\n📧 *Email:* ${email}\n📝 *Xabar:* ${message}`;
-      const botToken = "7994604742:AAEn4iqqS6GkgdGgnYvAxNA-HLrkQX4gEuU";
-      const chatId = "1013383124";
+                const submitBtn = e.target.querySelector("button[type='submit']");
+                const originalText = submitBtn.innerText;
+                submitBtn.disabled = true;
+                submitBtn.innerText = "Ma'lumot yuborilmoqda...";
 
-      await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: telegramMessage,
-          parse_mode: "Markdown",
-        }),
-      });
+                const name = e.target.name.value;
+                const email = e.target.email.value;
+                const message = e.target.message.value;
 
-      alert("✅ Xabaringiz Telegram'ga yuborildi!");
-      e.target.reset();
-    }}
-  >
-    <div>
-      <label htmlFor="name" className="block text-sm font-medium text-gray-300">Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        className="mt-1 w-full p-3 border bg-gray-950 text-gray-300 border-gray-300 rounded-lg shadow-sm focus:ring-[#27ae60] focus:border-[#27ae60]"
-        placeholder="Your Name"
-        required
-      />
-    </div>
+                const telegramMessage = `📩 *Yangi xabar!*\n\n👤 *Ism:* ${name}\n📧 *Email:* ${email}\n📝 *Xabar:* ${message}`;
+                const botToken = "7994604742:AAEn4iqqS6GkgdGgnYvAxNA-HLrkQX4gEuU";
+                const chatId = "1013383124";
 
-    <div>
-      <label htmlFor="email" className="block text-sm font-medium text-gray-300">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        className="mt-1 w-full p-3 border bg-gray-950 text-gray-300 border-gray-300 rounded-lg shadow-sm focus:ring-[#27ae60] focus:border-[#27ae60]"
-        placeholder="Your Email"
-        required
-      />
-    </div>
+                await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    chat_id: chatId,
+                    text: telegramMessage,
+                    parse_mode: "Markdown",
+                  }),
+                });
 
-    <div>
-      <label htmlFor="message" className="block text-sm font-medium text-gray-300">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        rows={5}
-        className="mt-1 w-full p-3 border bg-gray-950 text-gray-300 border-gray-300 rounded-lg shadow-sm focus:ring-[#27ae60] focus:border-[#27ae60]"
-        placeholder="Your Message"
-        required
-      ></textarea>
-    </div>
+                // Show success message and animate progress bar
+                const successDiv = document.getElementById("successMessage");
+                const progressBar = document.getElementById("progressBar");
 
-    <button
-      type="submit"
-      className="w-full bg-[#27ae60] text-white py-3 rounded-lg shadow-sm hover:bg-[#27ae60] transition-colors hover:shadow-lg"
-    >
-      Send Message
-    </button>
-  </form>
-</div>
+                successDiv.classList.remove("opacity-0", "pointer-events-none");
+                progressBar.style.width = "100%";
+                setTimeout(() => {
+                  progressBar.style.width = "0%";
+                }, 50);
+                setTimeout(() => {
+                  successDiv.classList.add("opacity-0", "pointer-events-none");
+                  progressBar.style.width = "100%";
+                }, 2500);
+
+                e.target.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalText;
+              }}
+            >
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="mt-1 w-full p-3 border bg-gray-950 text-gray-300 border-gray-300 rounded-lg shadow-sm focus:ring-[#27ae60] focus:border-[#27ae60]"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="mt-1 w-full p-3 border bg-gray-950 text-gray-300 border-gray-300 rounded-lg shadow-sm focus:ring-[#27ae60] focus:border-[#27ae60]"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="mt-1 w-full p-3 border bg-gray-950 text-gray-300 border-gray-300 rounded-lg shadow-sm focus:ring-[#27ae60] focus:border-[#27ae60]"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-[#27ae60] text-white py-3 rounded-lg shadow-sm hover:bg-[#27ae60] transition-colors hover:shadow-lg"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
 
         </div>
       </div>
