@@ -52,7 +52,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gray-950 -mb-7 z-50 w-full py-3 fixed px-[100px]">
+    <div className="bg-gray-950 -mb-7 z-50 w-full py-3 fixed px-[10px]">
       <div className="flex items-center justify-between max-w-7xl mx-auto px-4 md:px-0">
         {/* logo section */}
         <div>

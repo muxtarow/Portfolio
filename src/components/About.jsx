@@ -65,7 +65,7 @@ import { FaChevronRight } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div id="about" className="py-20 px-[100px] bg-gray-900 z-50 text-gray-300">
+    <div id="about" className="py-20 px-[10px] bg-gray-900 z-50 text-gray-300">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-11 text-center hover:text-[#27ae60] transition-colors">
           About Me

@@ -137,7 +137,7 @@ import { FaTwitter } from "react-icons/fa6";
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-gray-950 py-16 px-[100px]">
+    <section id="contact" className="bg-gray-950 py-16 px-[10px]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-bold text-center text-gray-300 mb-12">
           Contact Me

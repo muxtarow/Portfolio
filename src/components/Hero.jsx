@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="h-max md:h-screen bg-gradient-to-l bg-gray-950 text-white flex flex-col justify-center items-center relative z-10 pb-10 px-[100px]">
+    <section className="h-max md:h-screen bg-gradient-to-l bg-gray-950 text-white flex flex-col justify-center items-center relative z-10 pb-10 px-[10px]">
       {/* Yulduzlar */}
       <div>
         <span></span>
@@ -26,7 +26,7 @@ const Hero = () => {
         <span></span>
         <span></span>
       </div>
-      <div className="max-w-7xl mt-24 mx-auto items-center flex flex-col md:flex-row gap-16 md:gap-40 justify-between">
+      <div className="max-w-7x2 mt-24 mx-auto items-center flex flex-col md:flex-row gap-16 md:gap-40 justify-between">
         <div className="md:space-y-6 px-4">
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
@@ -105,7 +105,7 @@ const Hero = () => {
             transition={{ duration: 1.4, delay: 0 }}
             src={Abdulatifimg}
             alt="Abdulatif Torajanov"
-            className="rounded-full border border-[#27ae60] md:w-[500px] w-[300px] shadow-[0px_0px_20px_10px_rgba(0,0,0,0.3)] shadow-[#27ae60]"
+            className="rounded-full border border-[#27ae60] md:w-[300px] w-[300px] shadow-[0px_0px_20px_10px_rgba(0,0,0,0.3)] shadow-[#27ae60]"
           />
         </div>
       </div>
