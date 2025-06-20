@@ -137,7 +137,7 @@ import { FaTwitter } from "react-icons/fa6";
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-gray-950 py-16 px-[10px]">
+    <section id="contact" className="bg-gray-950 py-16 px-[15px]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-bold text-center text-gray-300 mb-12">
           Contact Me
@@ -189,7 +189,7 @@ const Contact = () => {
                   <FaFacebook />
                 </a>
                 <a
-                  href="https://t.me/Torajanov_o1"
+                  href="https://t.me/Torajanov_o7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-[#27ae60] transition-colors"
@@ -197,7 +197,7 @@ const Contact = () => {
                   <FaTelegram />
                 </a>
                 <a
-                  href="https://www.instagram.com/torajanov.o1"
+                  href="https://www.instagram.com/frontend_uz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-[#27ae60] transition-colors"

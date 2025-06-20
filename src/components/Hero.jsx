@@ -1,14 +1,14 @@
 import React from "react";
 import { Download } from "lucide-react";
 import { FaFacebook, FaInstagram, FaTelegram, FaGithub } from "react-icons/fa";
-import Abdulatifimg from "../assets/men.jpg";
+import Abdulatifimg from "../assets/kannnaaaaassds.jpg";
 import { motion } from "framer-motion";
 import "../Css/Hero.css";
 
 const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "Modern Minimalist CV Resume.pdf"; // public papkada bo'lishi kerak
+    link.href = "To'rajanov Abdulatif CV Resume.pdf"; // public papkada bo'lishi kerak
     link.download = "Abdulatif-Torajanov-CV.pdf"; // Fayl nomi
     link.click(); // Faylni yuklab olish
   };
@@ -64,14 +64,14 @@ const Hero = () => {
               <FaFacebook className="hover:text-[#27ae60]" />
             </a>
             <a
-              href="https://t.me/Torajanov_o1"
+              href="https://t.me/Torajanov_o7"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaTelegram className="hover:text-[#27ae60]" />
             </a>
             <a
-              href="https://www.instagram.com/torajanov.o1"
+              href="https://www.instagram.com/frontend_uz"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -98,19 +98,20 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="relative group">
-          <motion.img
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.4, delay: 0 }}
-            src={Abdulatifimg}
-            alt="Abdulatif Torajanov"
-            className="rounded-full border border-[#27ae60] md:w-[300px] w-[300px] shadow-[0px_0px_20px_10px_rgba(0,0,0,0.3)] shadow-[#27ae60]"
-          />
-        </div>
+       <div className="relative group">
+  <motion.img
+    initial={{ opacity: 0, scale: 0.5 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1.4, delay: 0 }}
+    src={Abdulatifimg}
+    alt="Abdulatif Torajanov"
+    className="rounded-full border border-[#27ae60] w-[300px] h-[300px] object-cover shadow-[0px_0px_20px_10px_rgba(0,0,0,0.3)] shadow-[#27ae60]"
+  />
+</div>
+
       </div>
     </section>
   );
 };
 
-export default Hero;  // Bu yerda default eksport qo'shish kerak
+export default Hero;

@@ -135,7 +135,7 @@ const Project = () => {
   ];
   
   return (
-    <section id='project' className='bg-gradient-to-r bg-gray-900 py-16 px-[10px]'>
+    <section id='project' className='bg-gradient-to-r bg-gray-900 py-16 px-[15px]'>
       <div className='max-w-7xl mx-auto'>
         <h2 className='text-5xl font-bold text-center text-gray-300 mb-12'>Projects</h2>
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10'>
@@ -165,7 +165,7 @@ const Project = () => {
                     href={project.github}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='flex gap-2 items-center bg-gray-800 text-white px-6 py-2 rounded-lg shadow-md hover:bg-gray-900 transition-colors'
+                    className='flex gap-2 items-center bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-900 transition-colors'
                   >
                     <FaGithub/> Github
                   </a>

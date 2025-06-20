@@ -65,8 +65,8 @@ import { FaChevronRight } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div id="about" className="py-20 px-[10px] bg-gray-900 z-50 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4">
+    <div id="about" className="py-20 px-[15px] bg-gray-900 z-50 text-gray-300">
+      <div className="max-w-7xl mx-auto px-2">
         <h2 className="text-4xl md:text-5xl font-bold mb-11 text-center hover:text-[#27ae60] transition-colors">
           About Me
         </h2>
@@ -96,7 +96,7 @@ const About = () => {
                   Html
                 </p>
                 <p className="bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded-full hover:bg-[#27ae60] hover:text-white transition-colors">
-                  Bootstrap
+                  Git-Github
                 </p>
                 <p className="bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded-full hover:bg-[#27ae60] hover:text-white transition-colors">
                   CSS
