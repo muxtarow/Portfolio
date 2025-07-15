@@ -39,7 +39,6 @@
 
 // export default Navbar
 
-
 import React, { useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
@@ -56,7 +55,12 @@ const Navbar = () => {
       <div className="flex items-center justify-around max-w-7xl mx-auto px-4 md:px-0">
         {/* logo section */}
         <div>
-          <h1 className="text-white  hover:text-[#27ae60] transition-all" style={{fontSize: "30px", fontWeight: '800'  }}>ABDULATIF</h1>
+          <h1
+            className="text-white  hover:text-[#27ae60] transition-all"
+            style={{ fontSize: "30px", fontWeight: "800" }}
+          >
+            Mansurbek
+          </h1>
         </div>
         {/* Menu section */}
         <nav className="hidden md:block">

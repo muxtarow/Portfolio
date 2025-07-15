@@ -1,15 +1,15 @@
 import React from "react";
 import { Download } from "lucide-react";
 import { FaFacebook, FaInstagram, FaTelegram, FaGithub } from "react-icons/fa";
-import Abdulatifimg from "../assets/kannnaaaaassds.jpg";
+import mansurbekimg from "../assets/photo-ban.jpg";
 import { motion } from "framer-motion";
 import "../Css/Hero.css";
 
 const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "To'rajanov Abdulatif CV Resume.pdf"; // public papkada bo'lishi kerak
-    link.download = "Abdulatif-Torajanov-CV.pdf"; // Fayl nomi
+    link.href = "Mansurbek_CV.pdf"; // public papkada bo'lishi kerak
+    link.download = "Mansurbek_CVf"; // Fayl nomi
     link.click(); // Faylni yuklab olish
   };
 
@@ -34,7 +34,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="md:text-6xl text-4xl font-bold mb-4"
           >
-            Hello, I am... <p className="text-[#27ae60]">Abdulatif Torajanov</p>
+            Hello, I am... <p className="text-[#27ae60]">Muxtarov Mansurbek</p>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, x: -100 }}
@@ -64,14 +64,14 @@ const Hero = () => {
               <FaFacebook className="hover:text-[#27ae60]" />
             </a>
             <a
-              href="https://t.me/Torajanov_o7"
+              href="https://t.me/muxtarow"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaTelegram className="hover:text-[#27ae60]" />
             </a>
             <a
-              href="https://www.instagram.com/frontend_uz"
+              href="https://www.instagram.com/mukhtarov____77"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -79,7 +79,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://github.com/Torajanov"
+              href="https://github.com/muxtarow"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#27ae60]"
@@ -98,17 +98,16 @@ const Hero = () => {
             </button>
           </div>
         </div>
-       <div className="relative group">
-  <motion.img
-    initial={{ opacity: 0, scale: 0.5 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1.4, delay: 0 }}
-    src={Abdulatifimg}
-    alt="Abdulatif Torajanov"
-    className="rounded-full border border-[#27ae60] w-[300px] h-[300px] object-cover shadow-[0px_0px_20px_10px_rgba(0,0,0,0.3)] shadow-[#27ae60]"
-  />
-</div>
-
+        <div className="relative group">
+          <motion.img
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.4, delay: 0 }}
+            src={mansurbekimg}
+            alt="Mansurbek Muxtarov"
+            className="rounded-full border border-[#27ae60] w-[300px] h-[300px] object-cover shadow-[0px_0px_20px_10px_rgba(0,0,0,0.3)] shadow-[#27ae60]"
+          />
+        </div>
       </div>
     </section>
   );
