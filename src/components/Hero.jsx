@@ -9,7 +9,7 @@ const Hero = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "Mansurbek_CV.pdf"; // public papkada bo'lishi kerak
-    link.download = "Mansurbek_CVf"; // Fayl nomi
+    link.download = "Mansurbek_CV.pdf"; // Fayl nomi
     link.click(); // Faylni yuklab olish
   };
 
