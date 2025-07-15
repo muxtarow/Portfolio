@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="overflow-hidden">
       <Navbar />
-      <Hero />  {/* Hero komponenti shu yerda chaqiriladi */}
+      <Hero />  
       <About />
       <Project />
       <Contact />
